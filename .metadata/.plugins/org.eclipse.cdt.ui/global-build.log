@@ -1,7 +1,0 @@
-01:27:31 **** Incremental Build of configuration Debug for project GPIO_baremetal ****
-make -j8 all 
-arm-none-eabi-size   GPIO_baremetal.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3540	     20	   1572	   5132	   140c	GPIO_baremetal.elf
-Finished building: default.size.stdout
- 
