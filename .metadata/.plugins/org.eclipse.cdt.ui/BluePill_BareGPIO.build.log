@@ -1,0 +1,10 @@
+02:53:51 **** Incremental Build of configuration Debug for project BluePill_BareGPIO ****
+make -j8 all 
+arm-none-eabi-size   BluePill_BareGPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    708	     12	   1572	   2292	    8f4	BluePill_BareGPIO.elf
+Finished building: default.size.stdout
+ 
+
+02:53:52 Build Finished. 0 errors, 0 warnings. (took 323ms)
+

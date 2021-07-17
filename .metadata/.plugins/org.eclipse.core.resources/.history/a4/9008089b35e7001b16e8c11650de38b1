@@ -1,0 +1,10 @@
+#include "stm32f1xx.h"
+//PC13
+//APB2
+//set bit 4 of RCC_APB2ENR to 1
+
+int main(void) {
+	while (1){
+
+	}
+}

@@ -1,0 +1,18 @@
+#include "stm32f1xx.h"
+// We will perform blink procedure on pin PC13
+// Change bit 4 of RCC_APB2ENR to 1
+
+int main(void) {
+
+	// Change bit 4 of RCC_APB2ENR to 1 for initializing clock for PORT-C
+	RCC->APB2ENR |= (1<<4);
+
+	// Configure Pin13 on PORT-C
+	GPIOC->CRH |= (1<<20) | (1<<21);
+
+
+	while (1){
+
+
+	}
+}

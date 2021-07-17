@@ -1,0 +1,9 @@
+#include "stm32f1xx.h"
+//PC13
+//APB2
+
+int main(void) {
+	while (1){
+
+	}
+}
