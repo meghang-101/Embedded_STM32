@@ -1,0 +1,20 @@
+19:05:49 **** Incremental Build of configuration Debug for project Smart_Curtain ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Smart_Curtain.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded_STM32\Smart_Curtain\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Smart_Curtain.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Smart_Curtain.elf
+ 
+arm-none-eabi-objdump -h -S  Smart_Curtain.elf  > "Smart_Curtain.list"
+arm-none-eabi-objcopy  -O binary  Smart_Curtain.elf  "Smart_Curtain.bin"
+arm-none-eabi-size   Smart_Curtain.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11584	    220	   1764	  13568	   3500	Smart_Curtain.elf
+Finished building: default.size.stdout
+ 
+Finished building: Smart_Curtain.bin
+ 
+Finished building: Smart_Curtain.list
+ 
+
+19:05:50 Build Finished. 0 errors, 0 warnings. (took 895ms)
+

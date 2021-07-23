@@ -1,0 +1,25 @@
+00:28:09 **** Incremental Build of configuration Debug for project PWM_HAL ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:5: error: too many arguments to function 'MX_TIM2_Init'
+  100 |     MX_TIM2_Init(i);
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:52:13: note: declared here
+   52 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:155:13: warning: type of 'pulse' defaults to 'int' [-Wimplicit-int]
+  155 | static void MX_TIM2_Init(pulse)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:156:1: error: number of arguments doesn't match prototype
+  156 | {
+      | ^
+../Core/Src/main.c:52:13: error: prototype declaration
+   52 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+00:28:09 Build Failed. 4 errors, 1 warnings. (took 390ms)
+

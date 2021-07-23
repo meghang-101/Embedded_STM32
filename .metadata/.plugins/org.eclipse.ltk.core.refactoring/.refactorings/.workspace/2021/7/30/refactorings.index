@@ -1,2 +1,5 @@
 1626632951357	Delete resource 'Blink_Assembly/Core/Src/main.c'
 1626633307914	Delete resource 'GPIO_Assembly/Core/Src/main.c'
+1626718152781	Delete resource 'Timer_Baremetal/Core/Src/main.c'
+1626719788388	Delete resource 'Timer_Baremetal'
+1626778628612	Delete resource 'PWM_HAL'

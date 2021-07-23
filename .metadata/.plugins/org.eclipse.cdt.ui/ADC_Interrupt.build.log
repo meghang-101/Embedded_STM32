@@ -1,0 +1,20 @@
+16:42:21 **** Incremental Build of configuration Debug for project ADC_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADC_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded_STM32\ADC_Interrupt\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_Interrupt.elf
+ 
+arm-none-eabi-objdump -h -S  ADC_Interrupt.elf  > "ADC_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  ADC_Interrupt.elf  "ADC_Interrupt.bin"
+arm-none-eabi-size   ADC_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7660	     20	   1620	   9300	   2454	ADC_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_Interrupt.list
+ 
+Finished building: ADC_Interrupt.bin
+ 
+
+16:42:23 Build Finished. 0 errors, 0 warnings. (took 1s.357ms)
+
